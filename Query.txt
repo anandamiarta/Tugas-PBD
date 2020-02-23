@@ -1,0 +1,42 @@
+--2. Query Dasar
+select * from patient where sex='P' and disiase='FLU';
+select * from patient where sex='P' or disiase='FLU';
+select * from doctor where name_doctor='BABA';
+
+--3. Intermediate
+select name_nurse, name_patient, disiase from treated_by
+join nurse USING (id_nurse)
+join patient using (id_patient);
+
+select name_doctor, Type_Of_doctor, Number_room from doctor
+join room using (number_room)
+where Type_of_doctor='DOKTER UMUM';
+
+select name_patient, name_doctor, AVG(total_payment) from payment
+join patient using (id_patient)
+join doctor using (id_doctor)
+WHERE type_of_doctor='DOKTER UMUM'
+group by name_patient, name_doctor
+having AVG(total_payment) < 1000000;
+
+--4. Main Query
+select name_doctor, count(id_patient) from take_care
+join patient using (id_patient)
+join doctor using (id_doctor)
+group by name_doctor;
+
+select building_name, number_room from room
+join building using (building_number)
+where building_number = (select building_number from building
+where building_number='A1');
+
+select id_patient, total_payment from payment
+join patient using (id_patient)
+where total_payment > (select total_payment from payment where id_patient = 'P21');
+
+
+
+
+
+
+
