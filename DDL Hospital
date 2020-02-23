@@ -1,0 +1,142 @@
+CREATE TABLE building (
+    building_number     CHAR(10) NOT NULL,
+    building_name       VARCHAR2(255),
+    building_function   VARCHAR2(255),
+    total_floor         INTEGER,
+    status              CHAR(10)
+);
+
+ALTER TABLE building ADD CONSTRAINT building_pk PRIMARY KEY ( building_number );
+
+CREATE TABLE cashier (
+    id_cashier     CHAR(10) NOT NULL,
+    name_cashier   VARCHAR2(255),
+    birth          DATE,
+    address        VARCHAR2(255),
+    sex            CHAR(1)
+);
+
+ALTER TABLE cashier ADD CONSTRAINT cashier_pk PRIMARY KEY ( id_cashier );
+
+CREATE TABLE doctor (
+    id_doctor        CHAR(10) NOT NULL,
+    name_doctor      VARCHAR2(255),
+    birth            DATE,
+    sex              CHAR(1),
+    type_of_doctor   VARCHAR2(255)
+);
+
+ALTER TABLE doctor ADD CONSTRAINT doctor_pk PRIMARY KEY ( id_doctor );
+
+CREATE TABLE drugs (
+    id_drugs       CHAR(10) NOT NULL,
+    name_drug      VARCHAR2(255),
+    type_0f_drug   VARCHAR2(255),
+    drug_content   VARCHAR2(255),
+    expired        DATE
+);
+
+ALTER TABLE drugs ADD CONSTRAINT drugs_pk PRIMARY KEY ( id_drugs );
+
+CREATE TABLE nurse (
+    id_nurse     CHAR(10) NOT NULL,
+    name_nurse   VARCHAR2(255),
+    address      VARCHAR2(255),
+    birth        DATE,
+    sex          CHAR(1)
+);
+
+ALTER TABLE nurse ADD CONSTRAINT nurse_pk PRIMARY KEY ( id_nurse );
+
+CREATE TABLE patient (
+    id_patient     CHAR(10) NOT NULL,
+    name_patient   VARCHAR2(255),
+    birth          DATE,
+    sex            CHAR(1),
+    disiase        VARCHAR2(255)
+);
+
+ALTER TABLE patient ADD CONSTRAINT patient_pk PRIMARY KEY ( id_patient );
+
+CREATE TABLE payment (
+    id_payment           CHAR(10) NOT NULL,
+    id_cashier   CHAR(10) NOT NULL,
+    id_stay         CHAR(10 CHAR) NOT NULL,
+    id_patient   CHAR(10) NOT NULL
+);
+
+ALTER TABLE payment ADD CONSTRAINT payment_pk PRIMARY KEY ( id_payment );
+
+CREATE TABLE room (
+    number_room                CHAR(10) NOT NULL,
+    type_room                  VARCHAR2(20),
+    facilities                 VARCHAR2(255),
+    room_price                 INT,
+    status                     CHAR(10),
+    building_number   	       CHAR(10) NOT NULL
+);
+
+ALTER TABLE room ADD CONSTRAINT room_pk PRIMARY KEY ( number_room );
+
+CREATE TABLE stay (
+    number_room   CHAR(10) NOT NULL,
+    id_stay       CHAR(10 CHAR) NOT NULL,
+    id_patient   CHAR(10) NOT NULL
+);
+
+ALTER TABLE stay ADD CONSTRAINT stay_pk PRIMARY KEY ( id_stay );
+
+CREATE TABLE take_care (
+    id_doctor     CHAR(10) NOT NULL,
+    id_patient   CHAR(10) NOT NULL,
+    id_drugs       CHAR(10) NOT NULL
+);
+
+CREATE TABLE treated_by (
+    id_patient   CHAR(10) NOT NULL,
+    id_nurse       CHAR(10) NOT NULL
+);
+
+ALTER TABLE payment
+    ADD CONSTRAINT payment_cashier_fk FOREIGN KEY ( id_cashier )
+        REFERENCES cashier ( id_cashier );
+
+ALTER TABLE payment
+    ADD CONSTRAINT payment_patient_fk FOREIGN KEY ( id_patient )
+        REFERENCES patient ( id_patient );
+
+ALTER TABLE payment
+    ADD CONSTRAINT payment_stay_fk FOREIGN KEY ( id_stay )
+        REFERENCES stay ( id_stay );
+
+ALTER TABLE room
+    ADD CONSTRAINT room_building_fk FOREIGN KEY ( building_number )
+        REFERENCES building ( building_number );
+
+ALTER TABLE stay
+    ADD CONSTRAINT stay_room_fk FOREIGN KEY ( number_room )
+        REFERENCES room ( number_room );
+
+ALTER TABLE stay
+    ADD CONSTRAINT stay_patient_fk FOREIGN KEY ( id_patient )
+        REFERENCES patient ( id_patient );
+
+ALTER TABLE take_care
+    ADD CONSTRAINT take_care_doctor_fk FOREIGN KEY ( id_doctor )
+        REFERENCES doctor ( id_doctor );
+
+ALTER TABLE take_care
+    ADD CONSTRAINT take_care_drugs_fk FOREIGN KEY ( id_drugs )
+        REFERENCES drugs ( id_drugs );
+
+ALTER TABLE take_care
+    ADD CONSTRAINT take_care_patient_fk FOREIGN KEY ( id_patient )
+        REFERENCES patient ( id_patient );
+
+ALTER TABLE treated_by
+    ADD CONSTRAINT treated_by_nurse_fk FOREIGN KEY ( id_nurse )
+        REFERENCES nurse ( id_nurse );
+
+ALTER TABLE treated_by
+    ADD CONSTRAINT treated_by_patient_fk FOREIGN KEY ( id_patient )
+        REFERENCES patient ( id_patient );
