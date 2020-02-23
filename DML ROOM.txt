@@ -1,0 +1,21 @@
+INSERT INTO ROOM VALUES ('R001','Presidential Suite','Tempat tidur listrik Stryker TV 29” dengan Pemutar DVD/VCD',100000,'ON','A1');
+INSERT INTO ROOM VALUES ('R002','Presidential Suite','Tempat tidur listrik Stryker TV 29” dengan Pemutar DVD/VCD',100000,'ON','A1');
+INSERT INTO ROOM VALUES ('R003','Presidential Suite','Tempat tidur listrik Stryker TV 29” dengan Pemutar DVD/VCD',100000,'ON','A1');
+INSERT INTO ROOM VALUES ('R004','Presidential Suite','Tempat tidur listrik Stryker TV 29” dengan Pemutar DVD/VCD',100000,'ON','A1');
+INSERT INTO ROOM VALUES ('R005','Presidential Suite','Tempat tidur listrik Stryker TV 29” dengan Pemutar DVD/VCD',100000,'ON','A1');
+INSERT INTO ROOM VALUES ('R101','Executive Suite','Tempat tidur listrik Joyce TV 29” dengan Pemutar DVD/VCD',200000,'ON','A2');
+INSERT INTO ROOM VALUES ('R102','Executive Suite','Tempat tidur listrik Joyce TV 29” dengan Pemutar DVD/VCD',200000,'ON','A2');
+INSERT INTO ROOM VALUES ('R103','Executive Suite','Tempat tidur listrik Joyce TV 29” dengan Pemutar DVD/VCD',200000,'ON','A2');
+INSERT INTO ROOM VALUES ('R104','Executive Suite','Tempat tidur listrik Joyce TV 29” dengan Pemutar DVD/VCD',200000,'ON','A2');
+INSERT INTO ROOM VALUES ('R105','Executive Suite','Tempat tidur listrik Joyce TV 29” dengan Pemutar DVD/VCD',200000,'ON','A2');
+
+INSERT INTO ROOM VALUES ('R201','Premium Suite','Tempat tidur listrik Stryker TV 45” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower',500000,'ON','A4');
+INSERT INTO ROOM VALUES ('R202','Premium Suite','Tempat tidur listrik Stryker TV 45” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower',500000,'ON','A4');
+INSERT INTO ROOM VALUES ('R203','Premium Suite','Tempat tidur listrik Stryker TV 45” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower',500000,'ON','A4');
+INSERT INTO ROOM VALUES ('R204','Premium Suite','Tempat tidur listrik Stryker TV 45” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower',500000,'ON','A4');
+INSERT INTO ROOM VALUES ('R205','Premium Suite','Tempat tidur listrik Stryker TV 45” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower',500000,'ON','A4');
+INSERT INTO ROOM VALUES ('R301','Sultan Suite','Tempat tidur listrik Joyce TV 60” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower + Full 24 hours services and private family room',1500000,'ON','A8');
+INSERT INTO ROOM VALUES ('R302','Sultan Suite','Tempat tidur listrik Joyce TV 60” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower + Full 24 hours services and private family room',1500000,'ON','A8');
+INSERT INTO ROOM VALUES ('R303','Sultan Suite','Tempat tidur listrik Joyce TV 60” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower + Full 24 hours services and private family room',1500000,'ON','A8');
+INSERT INTO ROOM VALUES ('R304','Sultan Suite','Tempat tidur listrik Joyce TV 60” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower + Full 24 hours services and private family room',1500000,'ON','A8');
+INSERT INTO ROOM VALUES ('R305','Sultan Suite','Tempat tidur listrik Joyce TV 60” dengan Pemutar DVD/VCD + Air Conditioner and Hot Shower + Full 24 hours services and private family room',1500000,'ON','A8');

@@ -1,0 +1,21 @@
+INSERT INTO drugs Values ('G11','Parasetamol','tablet','bebas','01-09-2020');
+INSERT INTO drugs Values ('G12','PLivron B Plex','tablet','bebas','01-09-2020');
+INSERT INTO drugs Values ('G13','Antimo','sirup','bebas terbatas','01-01-2020');
+INSERT INTO drugs Values ('G14','Noza','tablet','bebas terbatas','01-01-2021');
+INSERT INTO drugs Values ('G15','CTM','tablet','bebas terbatas','01-02-2020');
+INSERT INTO drugs Values ('G16','asam mefenamat','tablet','keras','01-09-2020');
+INSERT INTO drugs Values ('G17','phenobital','tablet','Psikotropika','01-01-2020');
+INSERT INTO drugs Values ('G18','diazepam','tablet','Psikotropika','01-09-2021');
+INSERT INTO drugs Values ('G19','Promethazine','sirup','bebas','01-05-2020');
+INSERT INTO drugs Values ('G20','Dextromethorphan','sirup','bebas','01-03-2020');
+.
+INSERT INTO drugs Values ('G21','Amoxilin','tablet','bebas','01-09-2020');
+INSERT INTO drugs Values ('G22','Ambroxol','tablet','bebas','01-09-2020');
+INSERT INTO drugs Values ('G23','Benzodiazepine','tablet','bebas terbatas','01-01-2020');
+INSERT INTO drugs Values ('G24','Cefepime','sirup','bebas terbatas','01-01-2021');
+INSERT INTO drugs Values ('G25','Citicolin','sirup','bebas terbatas','01-02-2020');
+INSERT INTO drugs Values ('G26','Dextrose','kapsul','keras','01-09-2020');
+INSERT INTO drugs Values ('G27','Epinephrine','kapsul','Psikotropika','01-01-2020');
+INSERT INTO drugs Values ('G28','Ibuprofen','tablet','Psikotropika','01-09-2021');
+INSERT INTO drugs Values ('G29','Haloperidol','sirup','bebas','01-05-2020');
+INSERT INTO drugs Values ('G30','Gliserol Topikal','sirup','bebas','01-03-2020');
